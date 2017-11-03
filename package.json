@@ -1,0 +1,36 @@
+{
+  "name": "pont-chaban-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "dev": "npm run build && node bin/dev",
+    "build": "npm run clean && babel src -d dist",
+    "start": "npm run dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.2",
+    "moment": "^2.19.1",
+    "phantom": "^4.0.5"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.0.1",
+    "babel-preset-env": "^1.6.1",
+    "cli-color": "^1.2.0",
+    "eslint": "^3.10.1",
+    "eslint-config-airbnb": "^10.0.1",
+    "eslint-plugin-flowtype": "^2.11.1",
+    "eslint-plugin-import": "^1.14.0",
+    "eslint-plugin-jsx-a11y": "^2.1.0",
+    "eslint-plugin-react": "^6.1.2",
+    "gaze": "^1.1.2",
+    "nodemon": "^1.12.1",
+    "rimraf": "^2.6.2"
+  }
+}
