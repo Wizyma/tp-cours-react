@@ -3,11 +3,12 @@ import ListItems from './list';
 import axios from 'axios';
 import Loading from './loading';
 import NotFound from './notfound';
+import Api from '../utils/api';
 
 class Single extends Component {
     constructor(props){
         super(props);
-        console.log(props)
+        
         this.state = {
             id: props.match.params.id,
             datas: null,
@@ -16,7 +17,7 @@ class Single extends Component {
     }
 
     componentDidMount(){
-        axios.get(`http://localhost:1339/${this.state.id}`)
+        Api.getById(this.state.id)
         .then(res => {
             console.log(res)
             this.setState({datas: res.data, err: false})

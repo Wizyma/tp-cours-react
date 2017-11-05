@@ -4,6 +4,7 @@ import moment from 'moment'
 import Loading from './loading';
 import Search from './search';
 import ListItems from './list'
+import Api from '../utils/api';
 
 class Home extends Component {
     constructor(props){
@@ -16,7 +17,7 @@ class Home extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:1339')
+        Api.getAll()
         .then(res => {
             this.setState({datas: res.data, err: false})
         })
@@ -29,12 +30,7 @@ class Home extends Component {
 
     handleSearch = (datas) => {
         this.setState({datas: null, err: false})
-        axios.get('http://localhost:1339', {
-            params: {
-               from: moment(datas.start).toDate(),
-               to: moment(datas.end).toDate() 
-            }
-        })
+        Api.getByDate(datas.start, datas.end)
         .then(res => {
             this.setState({datas: res.data, err: false})
         })
