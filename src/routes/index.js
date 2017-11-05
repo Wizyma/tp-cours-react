@@ -8,10 +8,8 @@ export default data => (req, res) => {
     from,
     to,
   } = req.query;
-
-  const _from = from ? moment(from, DATE_FORMAT) : moment().subtract(1, 'year');
-  const _to = to ? moment(to, DATE_FORMAT) : moment().add(1, 'year');
-
+  const _from = from ? moment(from) : moment().subtract(1, 'year');
+  const _to = to ? moment(to) : moment().add(1, 'year');
   if (
     _from.isAfter(_to) ||
     _to.isBefore(_from)
