@@ -7,12 +7,7 @@ class ChabanApi {
     }
 
     getByDate(start, end){
-        return axios.get('http://localhost:1339', {
-            params: {
-               from: moment(start).toDate(),
-               to: moment(end).toDate() 
-            }
-        })
+        return axios.get(`http://localhost:1339?from=${start}&to=${end}`)
     }
 
     getById(id){

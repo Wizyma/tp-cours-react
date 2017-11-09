@@ -22,7 +22,9 @@ export default class Search extends Component {
     }
 
     handleClick = () => {
-        this.props.handleSearch({start: this.state.startDate, end: this.state.endDate})
+        const start = moment(this.state.startDate).format('DD-MM-YYYY');
+        const end = moment(this.state.endDate).format('DD-MM-YYYY');
+        this.props.handleSearch({start, end})
     }
 
     render(){

@@ -30,7 +30,8 @@ class Home extends Component {
 
     handleSearch = (datas) => {
         this.setState({datas: null, err: false})
-        Api.getByDate(datas.start, datas.end)
+        const { start, end } = datas
+        Api.getByDate(start, end)
         .then(res => {
             this.setState({datas: res.data, err: false})
         })
