@@ -15,15 +15,9 @@ const ListItems = (props) => {
             {elems.map((elem, i) => {
                 return (
                     <div style={{padding: "20px"}} className="data-fetched" key={i}> 
-                        <span><strong>Date : {elem.date}</strong></span>
-                        <div>
-                            <span>Horaire de debut : <strong>{elem.start}</strong></span> / 
-                            <span> Horaire de fin : <strong>{elem.end}</strong></span>
-                        </div>
-                        <div>
-                            <strong>Raison : {elem.reason}</strong>
-                        </div>
-                        <Link to={`/single/${elem.id}`}>More...</Link>
+                        <h2>Pont Fermé le <strong>: {elem.date}</strong></h2>
+
+                        <Link style={{textDecoration: 'none', color: 'red'}} to={`/single/${elem.id}`}>En savoir plus</Link>
                     </div>
                 )
             })}
