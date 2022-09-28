@@ -8,16 +8,19 @@
     "dev": "npm run build && node bin/dev",
     "build": "npm run clean && babel src -d dist",
     "start": "npm run dev",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "cookie-parser": "^1.4.3",
     "express": "^4.16.2",
-    "moment": "^2.19.1",
+    "moment": "^2.29.4",
     "phantom": "^4.0.5",
-    "react-router-dom": "^4.2.2"
+    "react-router-dom": "^4.2.2",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -33,5 +36,6 @@
     "gaze": "^1.1.2",
     "nodemon": "^1.12.1",
     "rimraf": "^2.6.2"
-  }
+  },
+  "snyk": true
 }
