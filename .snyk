@@ -1,0 +1,26 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.25.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:debug:20170905':
+    - phantom > phantomjs-prebuilt > extract-zip > debug:
+        patched: '2022-10-03T14:54:29.403Z'
+  'npm:extend:20180424':
+    - phantom > phantomjs-prebuilt > request > extend:
+        patched: '2022-10-03T14:54:29.403Z'
+  'npm:hoek:20180212':
+    - phantom > phantomjs-prebuilt > request > hawk > hoek:
+        patched: '2022-10-03T14:54:29.403Z'
+    - phantom > phantomjs-prebuilt > request > hawk > boom > hoek:
+        patched: '2022-10-03T14:54:29.403Z'
+    - phantom > phantomjs-prebuilt > request > hawk > sntp > hoek:
+        patched: '2022-10-03T14:54:29.403Z'
+    - phantom > phantomjs-prebuilt > request > hawk > cryptiles > boom > hoek:
+        patched: '2022-10-03T14:54:29.403Z'
+  'npm:ms:20170412':
+    - phantom > phantomjs-prebuilt > extract-zip > debug > ms:
+        patched: '2022-10-03T14:54:29.403Z'
+  'npm:stringstream:20180511':
+    - phantom > phantomjs-prebuilt > request > stringstream:
+        patched: '2022-10-03T14:54:29.403Z'
